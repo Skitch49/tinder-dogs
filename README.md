@@ -25,9 +25,11 @@
 `ng generate environments`
 
 3. Ajouter la clé API dans le nouveau fichier environment 
-```export const environment = {
+```typescript
+export const environment = {
   apiKey: 'API_KEY_HERE',
-};```
+};
+```
 
 4. Lancer l'application :
 `ng serve`
