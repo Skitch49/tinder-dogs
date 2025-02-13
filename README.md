@@ -1,27 +1,36 @@
 # TinderDogs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+**TinderDogs** est une application web qui permet de liker des chiens en fonction de leurs races. Le but de l'application est de trouver la race de chien que l'on souhaite adopter en fonction de ses goûts personnels, mais aussi grâce à quelques critères, dont voici la liste :
+- Perte de poils
+- Degré de vocalisation
+- Énergie
+- Protecteur
+- Obéissant
 
-## Development server
+## Fonctionnalités
+- Générateur de chiens grâce à [Dogs API](https://api-ninjas.com/api/dogs) 
+- Aimer ou ne pas aimer un chien via des boutons
+- Aimer ou ne pas aimer un chien en le swipant avec les événements `mousedown`, `mousemove` et `mouseup`, ainsi que leurs équivalents pour les appareils mobiles avec `touch`
+- Affichage des textes "NOPE" ou "LIKE" lorsqu'on commence à swiper vers la droite ou vers la gauche
+- Stockage des chiens likés dans le `localStorage`
+- Filtrer les chiens likés par nom
+- Suppression des likes pour recommencer
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Installation
+1. Clonez le dépôt :
+`git clone https://github.com/Skitch49/tinder-dogs.git`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Ajouter un fichier environnement :
+`ng generate environments`
 
-## Build
+3. Ajouter la clé API dans le nouveau fichier environment 
+```export const environment = {
+  apiKey: 'API_KEY_HERE',
+};```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+4. Lancer l'application :
+`ng serve`
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Lien vers le projet
+Le projet est disponible en ligne à l'adresse suivante : https://tinder-dogs.alexis-delaunay.fr

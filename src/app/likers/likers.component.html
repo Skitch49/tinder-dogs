@@ -1,0 +1,24 @@
+<div class="container-animals-liked">
+  <div class="wrapper-header">
+    <h1>Voici tes likes !</h1>
+    <div class="content-wrapper-header">
+        <input type="text" [(ngModel)]="search" placeholder="Recherche par nom" />
+        @if(animalsLiked.length > 0){
+        <button (click)="deleteLocalStorage()" class="button-45">
+          Reset likes
+        </button>
+    
+        }
+    </div>
+
+  </div>
+  <div class="wrapper-cards">
+    @if (animalsLiked.length == 0) {
+    <p>Tu n'as encore liké aucun animal 😔</p>
+    } @else if (filtredAnimalsLiked.length == 0) {
+    <p>{{ search }} ne correspond a aucun animal liké</p>
+    } @else { @for (animal of filtredAnimalsLiked; track $index) {
+    <app-card [animal]="animal"></app-card>
+    } }
+  </div>
+</div>
